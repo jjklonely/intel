@@ -439,6 +439,7 @@ function addMessage(container, text, type) {
 }
 
 // Отправка в API (готово для сервера)
+// GPT автоматически определит язык вопроса и ответит на том же языке
 async function sendToAPI(question, container) {
     const loadingMsg = document.createElement('div');
     loadingMsg.className = 'message loading';
@@ -448,14 +449,15 @@ async function sendToAPI(question, container) {
     
     try {
         // Запрос на серверный endpoint /ask
+        // Отправляем только вопрос - GPT сам определит язык и ответит на нем
         const response = await fetch('/ask', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                question: question,
-                language: currentLang
+                question: question
+                // language больше не отправляется - GPT определяет язык автоматически
             })
         });
         

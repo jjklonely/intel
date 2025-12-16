@@ -14,17 +14,10 @@ app.use(express.static('.')); // Раздача статических файл�
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
 
-// Маппинг языков для промпта
-const languageMap = {
-    'ru': 'Russian',
-    'kg': 'Kyrgyz',
-    'en': 'English'
-};
-
 // Endpoint для обработки вопросов
 app.post('/ask', async (req, res) => {
     try {
-        const { question, language = 'ru' } = req.body;
+        const { question } = req.body;
 
         // Валидация
         if (!question || typeof question !== 'string' || question.trim().length === 0) {
@@ -41,13 +34,13 @@ app.post('/ask', async (req, res) => {
             });
         }
 
-        // Определение языка ответа
-        const responseLanguage = languageMap[language] || 'Russian';
-
         // Формирование промпта
+        // GPT автоматически определит язык вопроса и ответит на том же языке
         const systemPrompt = `You are a helpful assistant that provides information about Intel processors. 
-Answer in ${responseLanguage}. Be concise, accurate, and informative. 
-If the question is not about Intel processors, politely redirect the conversation to Intel-related topics.`;
+Detect the language of the user's question and respond in the SAME language that the user used.
+Be concise, accurate, and informative. 
+If the question is not about Intel processors, politely redirect the conversation to Intel-related topics.
+Always match the language of your response to the language of the user's question.`;
 
         // Запрос к OpenAI API (используем нативный fetch)
         const response = await fetch(OPENAI_API_URL, {
@@ -125,5 +118,6 @@ app.listen(PORT, '0.0.0.0', () => {
     } else {
         console.log('✅ OpenAI API key is configured');
         console.log('✅ Using model: gpt-4o-mini');
+        console.log('✅ Auto language detection enabled');
     }
 });
