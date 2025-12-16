@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no">
+    <meta name="description" content="Учебный сайт о компании Intel и процессорах Intel">
+    <title>Intel - Информация о процессорах</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Intel</h1>
+            </div>
+            <div class="header-controls">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ru" aria-label="Русский">RU</button>
+                    <button class="lang-btn" data-lang="kg" aria-label="Кыргызча">KG</button>
+                    <button class="lang-btn" data-lang="en" aria-label="English">ENG</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                    <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- О проекте -->
+        <section class="project-info">
+            <div class="container">
+                <p class="project-text" data-i18n="project-info">Этот сайт создан в учебных целях для изучения Intel и её процессоров с возможностью задавать вопросы ИИ</p>
+            </div>
+        </section>
+
+        <!-- Главная информация -->
+        <section class="hero">
+            <div class="container">
+                <h2 data-i18n="hero-title">О компании Intel</h2>
+                <div class="hero-content">
+                    <div class="hero-text-block">
+                        <p data-i18n="hero-text-1">Intel Corporation — американская корпорация, один из крупнейших производителей микропроцессоров и полупроводниковых компонентов для вычислительной техники. Основана в 1968 году Робертом Нойсом и Гордоном Муром в Санта-Кларе, Калифорния.</p>
+                        <p data-i18n="hero-text-2">Intel является пионером в области разработки процессоров и продолжает лидировать в индустрии, создавая инновационные решения для миллионов устройств по всему миру. Компания известна своими революционными технологиями, включая создание первого микропроцессора в 1971 году.</p>
+                        <p data-i18n="hero-text-3">За более чем 50 лет работы Intel внесла огромный вклад в развитие вычислительной техники. Компания производит процессоры для настольных компьютеров, ноутбуков, серверов, мобильных устройств и встраиваемых систем.</p>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">1968</div>
+                            <div class="stat-label" data-i18n="stat-founded">Год основания</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">110,000+</div>
+                            <div class="stat-label" data-i18n="stat-employees">Сотрудников</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">180+</div>
+                            <div class="stat-label" data-i18n="stat-countries">Стран присутствия</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История компании -->
+        <section class="history">
+            <div class="container">
+                <h2 data-i18n="history-title">История компании</h2>
+                <div class="history-content">
+                    <div class="history-item">
+                        <div class="history-year">1968</div>
+                        <div class="history-text">
+                            <h3 data-i18n="history-1-title">Основание</h3>
+                            <p data-i18n="history-1-text">Роберт Нойс и Гордон Мур основали Intel Corporation в Санта-Кларе, Калифорния. Компания начинала с производства полупроводниковой памяти.</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-year">1971</div>
+                        <div class="history-text">
+                            <h3 data-i18n="history-2-title">Первый микропроцессор</h3>
+                            <p data-i18n="history-2-text">Intel создала первый в мире коммерческий микропроцессор Intel 4004, который содержал 2300 транзисторов и работал на частоте 740 кГц.</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-year">2006</div>
+                        <div class="history-text">
+                            <h3 data-i18n="history-3-title">Core 2 Duo</h3>
+                            <p data-i18n="history-3-text">Запуск процессоров Core 2 Duo, которые стали прорывом в производительности и энергоэффективности для настольных и мобильных систем.</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-year">2008-2010</div>
+                        <div class="history-text">
+                            <h3 data-i18n="history-4-title">Core i серия</h3>
+                            <p data-i18n="history-4-text">Введение линейки процессоров Core i3, i5, i7 с архитектурой Nehalem, которая установила новые стандарты производительности.</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-year">2021</div>
+                        <div class="history-text">
+                            <h3 data-i18n="history-5-title">Alder Lake</h3>
+                            <p data-i18n="history-5-text">Запуск 12-го поколения процессоров с гибридной архитектурой, объединяющей производительные и энергоэффективные ядра.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайдер процессоров -->
+        <section class="processors">
+            <div class="container">
+                <h2 data-i18n="processors-title">Поколения процессоров Intel</h2>
+                <div class="slider-container">
+                    <button class="slider-btn prev" id="prevBtn" aria-label="Предыдущий слайд">‹</button>
+                    <div class="slider-wrapper">
+                        <div class="slider-track" id="sliderTrack"></div>
+                    </div>
+                    <button class="slider-btn next" id="nextBtn" aria-label="Следующий слайд">›</button>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="advantages">
+            <div class="container">
+                <h2 data-i18n="advantages-title">Преимущества процессоров Intel</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">⚡</div>
+                        <h3 data-i18n="advantage-1-title">Высокая производительность</h3>
+                        <p data-i18n="advantage-1-text">Процессоры Intel обеспечивают выдающуюся производительность для игр, профессиональных приложений и многозадачности благодаря передовым архитектурам и технологиям Turbo Boost.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🔋</div>
+                        <h3 data-i18n="advantage-2-title">Энергоэффективность</h3>
+                        <p data-i18n="advantage-2-text">Современные процессоры Intel сочетают высокую производительность с отличной энергоэффективностью, обеспечивая длительную работу ноутбуков и снижение энергопотребления.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🎮</div>
+                        <h3 data-i18n="advantage-3-title">Игровая производительность</h3>
+                        <p data-i18n="advantage-3-text">Процессоры Intel Core серии i5, i7 и i9 обеспечивают плавный игровой процесс в современных играх с высокими настройками графики и разрешением.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🔒</div>
+                        <h3 data-i18n="advantage-4-title">Безопасность</h3>
+                        <p data-i18n="advantage-4-text">Встроенные технологии безопасности Intel защищают ваши данные и обеспечивают безопасную работу в интернете с помощью аппаратных функций защиты.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🌐</div>
+                        <h3 data-i18n="advantage-5-title">Совместимость</h3>
+                        <p data-i18n="advantage-5-text">Процессоры Intel обеспечивают отличную совместимость с широким спектром программного обеспечения, операционных систем и периферийных устройств.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🚀</div>
+                        <h3 data-i18n="advantage-6-title">Инновации</h3>
+                        <p data-i18n="advantage-6-text">Intel постоянно внедряет новые технологии, такие как AI-ускорение, поддержка DDR5, PCIe 5.0 и гибридные архитектуры для максимальной производительности.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Кнопка ИИ -->
+    <button class="ai-question-btn" id="aiQuestionBtn" aria-label="Задать вопрос ИИ">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="8" cy="10" r="1" fill="currentColor"/>
+            <circle cx="12" cy="10" r="1" fill="currentColor"/>
+            <circle cx="16" cy="10" r="1" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <!-- Модальное окно ИИ -->
+    <div class="modal" id="questionModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal" aria-label="Закрыть">&times;</button>
+            <h3 data-i18n="modal-title">Задать вопрос о процессорах Intel</h3>
+            <div class="modal-chat">
+                <div class="modal-messages" id="modalMessages"></div>
+                <div class="modal-input-container">
+                    <input type="text" id="modalInput" data-i18n-placeholder="chat-placeholder" placeholder="Задайте вопрос о процессорах Intel..." autocomplete="off">
+                    <button class="modal-send-btn" id="modalSendBtn" aria-label="Отправить">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p data-i18n="footer-text">Учебный проект • Intel • 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
